@@ -48,7 +48,7 @@ sudo apt install npm nodejs
 
 Then install the necessary packages;
 ```bash
-npm install
+npm ci
 ```
 
 #### 3. Create Environment Variables
