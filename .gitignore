@@ -5,3 +5,4 @@ mainDb.json
 files/
 .env
 ssl/
+/docker-compose.override.yaml

@@ -4,6 +4,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "generate-jwt": "node generate-jwt.js",
+    "docker:build": "docker compose build",
+    "docker:logs": "docker compose logs -f",
+    "docker:start": "docker compose up -d",
+    "docker:stop": "docker compose down",
+    "docker:restart": "docker compose restart",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
