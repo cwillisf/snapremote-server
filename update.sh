@@ -35,7 +35,7 @@ mv "$TMP_EXTRACT" "$INSTALL_DIR"
 
 # Install dependencies
 cd "$INSTALL_DIR"
-npm install
+npm ci
 
 # Restart service if running
 if systemctl is-enabled --quiet "$SERVICE_NAME"; then

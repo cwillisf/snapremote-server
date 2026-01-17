@@ -32,7 +32,7 @@ if [ ! -d .git ]; then
 fi
 
 echo "📦 Installing dependencies..."
-npm install
+npm ci
 
 # Ask if user wants to create a systemd service
 read -r -p "🛠️  Do you want to run SnapRemote as a background service? (y/n): " setup_service < /dev/tty
