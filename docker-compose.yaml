@@ -7,12 +7,11 @@ services:
       # See README.md for more information on determining the correct device path.
       - /dev/video0
     environment:
-      # You MUST override values in `[SQUARE BRACKETS]`.
+      # You MUST override values in `${curly braces}`.
       # You MAY override other values too, of course.
       # See README.md for more information, especially for `JWT_SECRET_KEY`.
-      # Override using `docker-compose.override.yaml` or command line arguments.
-      - JWT_SECRET_KEY=[YOUR_JWT_SECRET]
-      - DEVICE_IP=[SNAPMAKER_DEVICE_IP]
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DEVICE_IP=${DEVICE_IP}
       - DEVICE_PORT=8888
       # These values should only affect activity inside the container
       - PORT=3000
@@ -24,3 +23,5 @@ services:
       # Access the web interface at http://{host_ip}:{host_port}/
       # You can override this, too, using `docker-compose.override.yaml` or command line arguments.
       - "8088:3000"
+    volumes:
+      - ./data:/app/data
