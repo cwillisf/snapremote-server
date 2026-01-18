@@ -68,7 +68,7 @@ DEVICE_PORT=8888                   # Default Snapmaker TCP port (do not change)
 WEBCAM_PATH="/dev/video0"     # If you have webcam connected to your server, you can enter the path of it to stream video
 ```
 
-Generate a secret at: [https://jwtsecret.com/generate](https://jwtsecret.com/generate)
+You can generate a secret by running `npm run generate-jwt`.
 
 To find your webcam path, run:
 ```bash
@@ -83,7 +83,7 @@ HD Pro Webcam C920 (usb-3f980000.usb-1.1.2):
 ### 4. Run Your Server
 
 ```bash
-node app.js
+npm start
 ```
 
 or with PM2:
@@ -105,7 +105,7 @@ Once your server starts without errors, visit:
 http://[YOUR_SERVER_IP]:[YOUR_PORT]
 ```
 
-Follow the prompts to create your user account.
+Follow the prompts to create your user account. Enter your `JWT_SECRET_KEY` as your password.
 
 > ⚠️ Only a single user is supported at the moment.
 

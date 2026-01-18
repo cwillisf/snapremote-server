@@ -38,8 +38,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const defaultData = {files: []}
-const db = await JSONFilePreset('database.json', defaultData)
-const mainDb = await JSONFilePreset('mainDb.json', {})
+const db = await JSONFilePreset('data/database.json', defaultData)
+const mainDb = await JSONFilePreset('data/mainDb.json', {})
 
 const PORT = process.env.PORT || 3000;
 const WEBCAM_PATH = process.env.WEBCAM_PATH;
@@ -751,4 +751,3 @@ app.post("/setNotificationToken", async (request, response) => {
         console.log(err);
     }
 })
-
